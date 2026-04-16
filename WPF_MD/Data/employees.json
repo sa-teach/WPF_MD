@@ -1,0 +1,38 @@
+[
+  {
+    "Id": "6dbd660d-1796-4fc6-a8b7-cdebbcb2166e",
+    "FullName": "Иванов Сергей Петрович",
+    "Position": "Backend Developer",
+    "Department": "IT",
+    "Age": 29,
+    "Email": "s.ivanov@company.local",
+    "Phone": "+7 (900) 100-10-10"
+  },
+  {
+    "Id": "3249dc47-d01f-4aa9-a8dc-835aaf5b92c6",
+    "FullName": "Петрова Анна Викторовна",
+    "Position": "HR Manager",
+    "Department": "HR",
+    "Age": 34,
+    "Email": "a.petrova@company.local",
+    "Phone": "+7 (900) 200-20-20"
+  },
+  {
+    "Id": "f4584ccb-1a65-4bde-a8d8-db8115d70355",
+    "FullName": "Сидоров Алексей Игоревич",
+    "Position": "QA Engineer",
+    "Department": "QA",
+    "Age": 27,
+    "Email": "a.sidorov@company.local",
+    "Phone": "+7 (900) 300-30-30"
+  },
+  {
+    "Id": "efaf1f4f-c9eb-4618-9225-fc7f5677bd9c",
+    "FullName": "Кузнецова Мария Олеговна",
+    "Position": "Project Manager",
+    "Department": "Management",
+    "Age": 31,
+    "Email": "m.kuznetsova@company.local",
+    "Phone": "+7 (900) 400-40-40"
+  }
+]

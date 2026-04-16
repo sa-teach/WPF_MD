@@ -1,0 +1,87 @@
+<Window x:Class="WPF_MD.Views.EmployeeDetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="{Binding WindowTitle}"
+        Height="460"
+        Width="420"
+        MinHeight="460"
+        MinWidth="420"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner">
+    <Grid Margin="16">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBlock FontSize="20"
+                   FontWeight="SemiBold"
+                   Text="{Binding WindowTitle}" />
+
+        <Grid Grid.Row="1" Margin="0,16,0,16">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+                <RowDefinition Height="Auto" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="130" />
+                <ColumnDefinition Width="*" />
+            </Grid.ColumnDefinitions>
+
+            <TextBlock Grid.Row="0" Grid.Column="0" Margin="0,0,12,12" VerticalAlignment="Center" Text="ФИО" />
+            <TextBox Grid.Row="0"
+                     Grid.Column="1"
+                     Margin="0,0,0,12"
+                     Text="{Binding FullName, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+
+            <TextBlock Grid.Row="1" Grid.Column="0" Margin="0,0,12,12" VerticalAlignment="Center" Text="Должность" />
+            <TextBox Grid.Row="1"
+                     Grid.Column="1"
+                     Margin="0,0,0,12"
+                     Text="{Binding Position, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+
+            <TextBlock Grid.Row="2" Grid.Column="0" Margin="0,0,12,12" VerticalAlignment="Center" Text="Отдел" />
+            <TextBox Grid.Row="2"
+                     Grid.Column="1"
+                     Margin="0,0,0,12"
+                     Text="{Binding Department, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+
+            <TextBlock Grid.Row="3" Grid.Column="0" Margin="0,0,12,12" VerticalAlignment="Center" Text="Возраст" />
+            <TextBox Grid.Row="3"
+                     Grid.Column="1"
+                     Margin="0,0,0,12"
+                     Text="{Binding AgeText, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+
+            <TextBlock Grid.Row="4" Grid.Column="0" Margin="0,0,12,12" VerticalAlignment="Center" Text="Email" />
+            <TextBox Grid.Row="4"
+                     Grid.Column="1"
+                     Margin="0,0,0,12"
+                     Text="{Binding Email, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+
+            <TextBlock Grid.Row="5" Grid.Column="0" Margin="0,0,12,0" VerticalAlignment="Center" Text="Телефон" />
+            <TextBox Grid.Row="5"
+                     Grid.Column="1"
+                     Text="{Binding Phone, UpdateSourceTrigger=PropertyChanged, ValidatesOnNotifyDataErrors=True}" />
+        </Grid>
+
+        <StackPanel Grid.Row="2"
+                    Orientation="Horizontal"
+                    HorizontalAlignment="Right">
+            <Button Width="100"
+                    Margin="0,0,8,0"
+                    Command="{Binding SaveCommand}"
+                    Content="Сохранить" />
+            <Button Width="100"
+                    Command="{Binding CancelCommand}"
+                    Content="Отмена" />
+        </StackPanel>
+    </Grid>
+</Window>
